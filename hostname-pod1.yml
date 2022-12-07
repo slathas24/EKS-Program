@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+ name: hostname-pod-101
+ labels:
+  app: echo-hostname
+  app-version: v101
+spec:
+ containers:
+  - name: nginx-hostname
+    image: kubegoldenguide/nginx-hostname:1.0.1
+    ports:
+	- containerPort: 80

@@ -1,0 +1,4 @@
+FROM node:carbon
+WORKDIR /app
+COPY index.js .
+CMD node index.js
