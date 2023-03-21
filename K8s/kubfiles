@@ -1,0 +1,45 @@
+// -- backend api jar                                               beapi.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smbe
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: beapi
+  template:
+    metadata:
+      labels:
+        app: beapi
+    spec:
+      containers:
+      - name: beapi
+        image: lsubrama24/demobe:beimg
+        ports:
+        - containerPort: 8080
+
+
+//==================== Fe
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smfe
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: smfe
+  template:
+    metadata:
+      labels:
+        app: smfe
+    spec:
+      containers:
+      - name: smfe
+        image: lsubrama24/demobe:feimg
+        ports:
+        - containerPort: 3000
+        env:
+         - name: REACT_APP_API_URL
+           value: "not ste"
