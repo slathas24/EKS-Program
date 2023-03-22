@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-be
+  labels:
+    app: my-be 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-be 
+  template:
+    metadata:
+      labels:
+        app: my-be
+    spec:
+      containers:
+      - name: my-be-api
+        image: lsubrama24/smbankbe

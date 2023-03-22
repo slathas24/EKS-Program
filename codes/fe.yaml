@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: reapp-fe
+    labels:
+        kubernetes.io/name: reactapp-ui
+        kubernetes.io/instance: reactapp-ui-staging
+        kubernetes.io/component: UI
+        kubernetes.io/verison: 1.0.1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: reapp-fe
+  template:
+    metadata:
+      labels:
+        app: reapp-fe
+    spec:
+      containers:
+        - name: reapp-fe
+          image: lsubrama24/demobe:feimg
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REACT_APP_API_IP
+              value: "http://10.100.43.232:200/"
