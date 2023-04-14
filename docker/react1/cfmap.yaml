@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: reapp-fe
+data:
+    api.server: http://10.100.253.188:90/
+    

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - image: lsubrama24/smbankfe:fewithngin1
+          name: frontend
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          #env:
+          #  - name: REACT_APP_API_URL
+          #    value: "http://10.100.253.188:90/" 
+              #valueFrom:
+               #  configMapKeyRef:
+                #   name: reapp-fe
+                 #  key: api.server          
+          volumeMounts:
+            - name: nginx-config
+              mountPath: /etc/nginx/nginx.conf
+              subPath: nginx.conf
+      volumes:              
+          - name: nginx-config
+            configMap:
+              name: nginx-config
+
