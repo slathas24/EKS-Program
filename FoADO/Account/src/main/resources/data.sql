@@ -1,0 +1,10 @@
+insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A001','C001','savings',10000,'INR');
+insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A002','C001','savings',1000,'INR');
+insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A003','C001','savings',20000,'INR');
+insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A004','C002','savings',200000,'INR');
+insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A005','C002','fixed',50000,'INR');
+insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A006','C002','savings',5500,'INR');
+insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A007','C002','savings',800000,'INR');
+insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A008','C001','fixed',10000,'INR');
+insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A009','C003','savings',7000,'INR');
+insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A010','C003','savings',10000,'INR');
