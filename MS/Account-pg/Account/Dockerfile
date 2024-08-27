@@ -9,7 +9,10 @@ COPY --from=build /build/target/*.jar acct.jar
 EXPOSE 8091
 ENV CUST_URL null
 ENV CUST_PORT null
-EXPOSE 8091
+ENV DB_DET null
+ENV DB_PORT null
+ENV DBUSER_NAME null
+ENV DBUSER_PWD null
 
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -jar acct.jar" ]
 
