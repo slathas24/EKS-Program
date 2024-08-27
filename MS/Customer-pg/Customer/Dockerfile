@@ -11,3 +11,4 @@ ENV DB_DET null
 ENV DB_PORT null
 ENV DBUSER_NAME NULL
 ENV DBUSER_PWD null
+ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -jar cust1.jar" ]
