@@ -1,3 +1,4 @@
+TRUNCATE TABLE bank_account;
 insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A001','C001','savings',10000,'INR');
 insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A002','C001','savings',1000,'INR');
 insert into bank_account (accountid, custid,accounttype,balance,currency) values ('A003','C001','savings',20000,'INR');
